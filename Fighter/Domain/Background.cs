@@ -8,7 +8,7 @@ namespace Fighter.Domain
 {
     public class Background : Asset
     {
-        public Background(Game game, string path, int width, int height) : base(game, path, width, height)
+        public Background(Game game, string path, int width, int height) : base(game, path, width, height, 0, 0)
         {
             this.X = 0;
             this.Y = 0;

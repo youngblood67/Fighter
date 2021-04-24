@@ -11,7 +11,9 @@ namespace Fighter
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
 
-        private Asset _heroShip, _enemyShip, _background;
+        private Asset _background;
+        private HeroShip _heroShip;
+        private EnemyShip _enemyShip;
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -32,15 +34,29 @@ namespace Fighter
 
             // TODO: use this.Content to load your game content here
             _background = new Background(this, "Images/back", 800, 480);
-            _heroShip = new HeroShip(this, "Images/white_ship",50,50, 400, 400);
-            _enemyShip = new EnemyShip(this, "Images/enemy_ship", 400, 50, 400,50);
+            _heroShip = new HeroShip(this, "Images/white_ship", 50, 50, 400, 400, 100, 100, 8);   //créer une fabrique
+            _enemyShip = new EnemyShip(this, "Images/enemy_ship", 50, 50, 400, 50, 50, 0, 5);
         }
 
         protected override void Update(GameTime gameTime)
         {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-                Exit();
+            if (Keyboard.GetState().IsKeyDown(Keys.Right))
+            {
+                _heroShip.X += _heroShip.Speed;
+            }
 
+            if (Keyboard.GetState().IsKeyDown(Keys.Left))
+            {
+                _heroShip.X -= _heroShip.Speed;
+            }
+            if (Keyboard.GetState().IsKeyDown(Keys.Up))
+            {
+                _heroShip.Y -= _heroShip.Speed;
+            }
+            if (Keyboard.GetState().IsKeyDown(Keys.Down))
+            {
+                _heroShip.Y += _heroShip.Speed;
+            }
             // TODO: Add your update logic here
 
             base.Update(gameTime);
