@@ -90,3 +90,4 @@ E:\Git\Fighter\Fighter\obj\Debug\netcoreapp3.1\Fighter.csproj.CopyComplete
 E:\Git\Fighter\Fighter\obj\Debug\netcoreapp3.1\Fighter.dll
 E:\Git\Fighter\Fighter\obj\Debug\netcoreapp3.1\Fighter.pdb
 E:\Git\Fighter\Fighter\obj\Debug\netcoreapp3.1\Fighter.genruntimeconfig.cache
+E:\Git\Fighter\Fighter\bin\Debug\netcoreapp3.1\Content\Fonts\Score.xnb

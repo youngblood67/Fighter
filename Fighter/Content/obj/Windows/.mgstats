@@ -1,4 +1,5 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"E:/GAMEDEV/Fighter/Fighter/Content/Images/back.jpg","E:/GAMEDEV/Fighter/Fighter/Content/bin/Windows/Images/back.xnb","TextureProcessor","Texture2DContent",50997,1044253,0,1593003
-"E:/GAMEDEV/Fighter/Fighter/Content/Images/enemy_ship.png","E:/GAMEDEV/Fighter/Fighter/Content/bin/Windows/Images/enemy_ship.xnb","TextureProcessor","Texture2DContent",757403,6793649,0,2211987
-"E:/GAMEDEV/Fighter/Fighter/Content/Images/white_ship.png","E:/GAMEDEV/Fighter/Fighter/Content/bin/Windows/Images/white_ship.xnb","TextureProcessor","Texture2DContent",839386,8120281,0,2371637
+"E:/Git/Fighter/Fighter/Content/Fonts/Score.spritefont","E:/Git/Fighter/Fighter/Content/bin/Windows/Fonts/Score.xnb","FontDescriptionProcessor","SpriteFontContent",2008,21538,0,2886506
+"E:/Git/Fighter/Fighter/Content/Images/back.jpg","E:/Git/Fighter/Fighter/Content/bin/Windows/Images/back.xnb","TextureProcessor","Texture2DContent",50997,1044253,0,0871732
+"E:/Git/Fighter/Fighter/Content/Images/enemy_ship.png","E:/Git/Fighter/Fighter/Content/bin/Windows/Images/enemy_ship.xnb","TextureProcessor","Texture2DContent",757403,6793649,0,2214562
+"E:/Git/Fighter/Fighter/Content/Images/white_ship.png","E:/Git/Fighter/Fighter/Content/bin/Windows/Images/white_ship.xnb","TextureProcessor","Texture2DContent",839386,8120281,0,2615819

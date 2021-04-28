@@ -4,11 +4,13 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
+    <File>E:/Git/Fighter/Fighter/Content/Fonts/Score.spritefont</File>
     <File>E:/Git/Fighter/Fighter/Content/Images/back.jpg</File>
     <File>E:/Git/Fighter/Fighter/Content/Images/enemy_ship.png</File>
     <File>E:/Git/Fighter/Fighter/Content/Images/white_ship.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

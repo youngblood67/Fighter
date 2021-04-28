@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>E:/GAMEDEV/Fighter/Fighter/Content/Images/white_ship.png</SourceFile>
+  <SourceFile>E:/Git/Fighter/Fighter/Content/Images/white_ship.png</SourceFile>
   <SourceTime>2021-04-23T16:50:59.0227207+02:00</SourceTime>
-  <DestFile>E:/GAMEDEV/Fighter/Fighter/Content/bin/Windows/Images/white_ship.xnb</DestFile>
-  <DestTime>2021-04-23T17:39:52.3361089+02:00</DestTime>
+  <DestFile>E:/Git/Fighter/Fighter/Content/bin/Windows/Images/white_ship.xnb</DestFile>
+  <DestTime>2021-04-28T17:04:55.8373538+02:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2020-08-10T16:17:54+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

@@ -9,12 +9,13 @@ namespace Fighter.Domain
 {
     public abstract class Ship : Asset, IMovable, IRotationable
     {
-
+       
         public int Life { get; set; }
         public int Armor { get; set; }
         public int Speed { get; set; }
 
         public float Rotation { get; set; }
+        public float RotationSpeed { get; set; }
 
 
         public Ship(Game game, string path, int width, int height, int x, int y, int life, int armor, int speed) : base(game, path, width, height, x, y)
