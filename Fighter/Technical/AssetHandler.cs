@@ -32,7 +32,7 @@ namespace Fighter.Technical
 
         public void Rotate(Ship asset, Sens sens)
         {
-            asset.Rotate(asset, sens);
+            asset.Rotate(asset, new Rotation(sens));
         }
 
 

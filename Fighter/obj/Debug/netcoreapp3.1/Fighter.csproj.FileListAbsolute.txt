@@ -82,7 +82,6 @@ E:\Git\Fighter\Fighter\bin\Debug\netcoreapp3.1\runtimes\win7-arm\native\libuv.dl
 E:\Git\Fighter\Fighter\bin\Debug\netcoreapp3.1\runtimes\win7-x64\native\libuv.dll
 E:\Git\Fighter\Fighter\bin\Debug\netcoreapp3.1\runtimes\win7-x86\native\libuv.dll
 E:\Git\Fighter\Fighter\bin\Debug\netcoreapp3.1\MonoGame.Extended.Content.Pipeline.dll
-E:\Git\Fighter\Fighter\obj\Debug\netcoreapp3.1\Fighter.csprojAssemblyReference.cache
 E:\Git\Fighter\Fighter\obj\Debug\netcoreapp3.1\Fighter.AssemblyInfoInputs.cache
 E:\Git\Fighter\Fighter\obj\Debug\netcoreapp3.1\Fighter.AssemblyInfo.cs
 E:\Git\Fighter\Fighter\obj\Debug\netcoreapp3.1\Fighter.csproj.CoreCompileInputs.cache

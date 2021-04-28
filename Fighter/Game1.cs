@@ -17,10 +17,6 @@ namespace Fighter
 
         private AssetHandler _assetHandler;
 
-
-        private int v1 = 0;
-        private int v2 = 0;
-
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -77,23 +73,6 @@ namespace Fighter
                 _assetHandler.Rotate(_heroShip, Sens.Left);
             }
 
-            ///Test Rotation Debug
-            if (Keyboard.GetState().IsKeyDown(Keys.A))
-            {
-                v1 += 1;
-            }
-            if (Keyboard.GetState().IsKeyDown(Keys.Z))
-            {
-                v2 += 1;
-            }
-            if (Keyboard.GetState().IsKeyDown(Keys.Q))
-            {
-                v1 -= 1;
-            }
-            if (Keyboard.GetState().IsKeyDown(Keys.S))
-            {
-                v2 -= 1;
-            }
 
             base.Update(gameTime);
         }
@@ -102,15 +81,11 @@ namespace Fighter
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            // TODO: Add your drawing code here
             _spriteBatch.Begin();
+
             _spriteBatch.Draw(_background.GetImage(), _background.GetRectangle(), Color.White);
-            _spriteBatch.Draw(_heroShip.GetImage(), _heroShip.GetRectangle(), null, Color.White, _heroShip.Rotation, new Vector2(10, 10), SpriteEffects.None, 1);
+            _spriteBatch.Draw(_heroShip.GetImage(), _heroShip.GetRectangle(), new Rectangle(0, 0, _heroShip.GetImage().Width, _heroShip.GetImage().Height), Color.White, _heroShip.Rotation.Angle, new Vector2(_heroShip.GetImage().Width / 2, _heroShip.GetImage().Height / 2), SpriteEffects.None, 1);
             _spriteBatch.Draw(_enemyShip.GetImage(), _enemyShip.GetRectangle(), Color.White);
-           
-            SpriteFont font = Content.Load<SpriteFont>("Fonts/Score");
-            _spriteBatch.DrawString(font, $"Rotation : {_heroShip.Rotation}", new Vector2(20, 10), Color.Yellow);
-            _spriteBatch.DrawString(font, $"new Vector2({v1},{v2})", new Vector2(20, 40), Color.Yellow);
 
             _spriteBatch.End();
 
@@ -118,3 +93,8 @@ namespace Fighter
         }
     }
 }
+
+///TODO
+///Déplacement style Android
+/////DisplayHandler avec SpriteBatch pour méthode Draw tout comme assetHandler pour Update --> DysplayHandler.Draw(_heroShip), etc...
+//////DrawString DEBUG

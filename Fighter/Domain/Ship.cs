@@ -9,13 +9,14 @@ namespace Fighter.Domain
 {
     public abstract class Ship : Asset, IMovable, IRotationable
     {
-       
+        private const float ShipDefaultRotationSpeed = 0.05f;
+
         public int Life { get; set; }
         public int Armor { get; set; }
         public int Speed { get; set; }
 
-        public float Rotation { get; set; }
-        public float RotationSpeed { get; set; }
+        public Rotation Rotation { get; set; }
+
 
 
         public Ship(Game game, string path, int width, int height, int x, int y, int life, int armor, int speed) : base(game, path, width, height, x, y)
@@ -23,7 +24,7 @@ namespace Fighter.Domain
             this.Life = life;
             this.Armor = armor;
             this.Speed = speed;
-            this.Rotation = 0;
+            this.Rotation = new Rotation(Sens.None, ShipDefaultRotationSpeed);
         }
 
         public void Move(Asset asset, Direction direction)
@@ -45,17 +46,19 @@ namespace Fighter.Domain
             }
         }
 
-        public void Rotate(Asset asset, Sens sens)
+        public void Rotate(Asset asset, Rotation rotation)
         {
-            switch (sens)
+            switch (rotation.Sens)
             {
                 case Sens.Left:
-                    this.Rotation -= 0.01f;
+                    this.Rotation.Angle -= this.Rotation.Speed; ;
                     break;
                 case Sens.Right:
-                    this.Rotation += 0.01f;
+                    this.Rotation.Angle += this.Rotation.Speed;
                     break;
             }
         }
     }
+
+
 }

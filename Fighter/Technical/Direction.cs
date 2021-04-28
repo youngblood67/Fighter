@@ -15,6 +15,7 @@ namespace Fighter.Technical
 
     public enum Sens
     {
+        None,
         Right,
         Left
     }
