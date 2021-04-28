@@ -15,6 +15,7 @@ namespace Fighter.Technical
         public int X { get; set; }
         public int Y { get; set; }
 
+
         public Asset(Game game, string path, int width, int height, int x, int y)
         {
             this._game = game;

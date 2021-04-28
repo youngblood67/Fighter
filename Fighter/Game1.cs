@@ -14,6 +14,8 @@ namespace Fighter
         private Asset _background;
         private HeroShip _heroShip;
         private EnemyShip _enemyShip;
+
+        private AssetHandler _assetHandler;
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -31,6 +33,7 @@ namespace Fighter
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
+            _assetHandler = AssetHandler.GetInstance();
 
             // TODO: use this.Content to load your game content here
             _background = new Background(this, "Images/back", 800, 480);
@@ -40,24 +43,34 @@ namespace Fighter
 
         protected override void Update(GameTime gameTime)
         {
-            if (Keyboard.GetState().IsKeyDown(Keys.Right))
+            ///Move Handling
+            if (Keyboard.GetState().IsKeyDown(Keys.NumPad6))
             {
-                _heroShip.X += _heroShip.Speed;
+                _assetHandler.Move(_heroShip, Direction.Right);
+            }
+            if (Keyboard.GetState().IsKeyDown(Keys.NumPad4))
+            {
+                _assetHandler.Move(_heroShip, Direction.Left);
+            }
+            if (Keyboard.GetState().IsKeyDown(Keys.NumPad8))
+            {
+                _assetHandler.Move(_heroShip, Direction.Up);
+            }
+            if (Keyboard.GetState().IsKeyDown(Keys.NumPad2))
+            {
+                _assetHandler.Move(_heroShip, Direction.Down);
             }
 
-            if (Keyboard.GetState().IsKeyDown(Keys.Left))
+            ///Rotate Handling
+            if (Keyboard.GetState().IsKeyDown(Keys.NumPad9))
             {
-                _heroShip.X -= _heroShip.Speed;
+                _assetHandler.Rotate(_heroShip, Sens.Right);
             }
-            if (Keyboard.GetState().IsKeyDown(Keys.Up))
+            if (Keyboard.GetState().IsKeyDown(Keys.NumPad7))
             {
-                _heroShip.Y -= _heroShip.Speed;
+                _assetHandler.Rotate(_heroShip, Sens.Left);
             }
-            if (Keyboard.GetState().IsKeyDown(Keys.Down))
-            {
-                _heroShip.Y += _heroShip.Speed;
-            }
-            // TODO: Add your update logic here
+
 
             base.Update(gameTime);
         }
@@ -69,7 +82,7 @@ namespace Fighter
             // TODO: Add your drawing code here
             _spriteBatch.Begin();
             _spriteBatch.Draw(_background.GetImage(), _background.GetRectangle(), Color.White);
-            _spriteBatch.Draw(_heroShip.GetImage(), _heroShip.GetRectangle(), Color.White);
+            _spriteBatch.Draw(_heroShip.GetImage(), _heroShip.GetRectangle(), null, Color.White, _heroShip.Rotation, new Vector2(0, 0), SpriteEffects.None, 1);
             _spriteBatch.Draw(_enemyShip.GetImage(), _enemyShip.GetRectangle(), Color.White);
             _spriteBatch.End();
 
